@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pencatat Catatan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #note-form {
+      margin-bottom: 20px;
+    }
+
+    #note-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .note-item {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .note-item h3 {
+      margin-top: 0;
+    }
+
+    .note-item p {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pencatat Catatan</h1>
+
+  <div id="note-form">
+    <h2>Tambah Catatan</h2>
+    <form id="add-note-form">
+      <label for="note-title">Judul:</label>
+      <input type="text" id="note-title" required>
+
+      <label for="note-content">Isi Catatan:</label>
+      <textarea id="note-content" required></textarea>
+
+      <button type="submit">Simpan Catatan</button>
+    </form>
+  </div>
+
+  <h2>Daftar Catatan</h2>
+  <ul id="note-list"></ul>
+
+  <script>
+    // Ambil elemen form dan daftar catatan
+    const addNoteForm = document.getElementById('add-note-form');
+    const noteList = document.getElementById('note-list');
+
+    // Tambahkan event listener untuk saat form disubmit
+    addNoteForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // Hindari reload halaman
+
+      // Ambil nilai judul dan isi catatan dari input form
+      const noteTitle = document.getElementById('note-title').value;
+      const noteContent = document.getElementById('note-content').value;
+
+      // Buat elemen untuk catatan baru
+      const newNote = document.createElement('li');
+      newNote.classList.add('note-item');
+      newNote.innerHTML = `
+        <h3>${noteTitle}</h3>
+        <p>${noteContent}</p>
+      `;
+
+      // Tambahkan catatan baru ke daftar catatan
+      noteList.appendChild(newNote);
+
+      // Reset nilai input form
+      addNoteForm.reset();
+    });
+  </script>
+</body>
+</html>
