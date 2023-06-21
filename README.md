@@ -22,9 +22,6 @@ Aplikasi ini memungkinkan pengguna untuk mencatat dan menyimpan catatan dalam be
 5. Catatan baru akan ditampilkan dalam daftar catatan di bawahnya.
 6. Ulangi langkah 3-5 untuk menambahkan catatan baru.
 
-## Demo
-
-Anda dapat melihat demo aplikasi ini [di sini](link-demo).
 
 ## Kontribusi
 
@@ -35,4 +32,4 @@ Anda dapat melakukan kontribusi terhadap proyek ini dengan melakukan pull reques
 Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 
 ---
-Dibuat oleh [Nama Anda]
+Dibuat oleh Fakhrun
