@@ -5,10 +5,53 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
     }
 
     #note-form {
       margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #555;
     }
 
     #note-list {
@@ -21,14 +64,17 @@
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      background-color: #fff;
     }
 
     .note-item h3 {
       margin-top: 0;
+      color: #333;
     }
 
     .note-item p {
       margin-bottom: 0;
+      color: #555;
     }
   </style>
 </head>
@@ -76,8 +122,3 @@
       noteList.appendChild(newNote);
 
       // Reset nilai input form
-      addNoteForm.reset();
-    });
-  </script>
-</body>
-</html>
